@@ -13,3 +13,11 @@
 .statusbar-overlay {
     background: #000000;
 }
+
+div[class*="col-"] {
+  text-align: center;
+  padding: 1px;
+}
+.row {
+  margin: 1px;
+}          

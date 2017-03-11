@@ -39,36 +39,9 @@
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-        <div class="content-block">
- <div class="list-block">
-  <ul>
-    <!-- Smart select item -->
-    <li>
-      <!-- Additional "smart-select" class -->
-      <a href="#" class="item-link smart-select">
-        <!-- select -->
-        <select name="fruits">
-          <option value="apple" selected>Apple</option>
-            <option value="pineapple">Pineapple</option>
-        </select>
-        <div class="item-content">
-          <div class="item-inner">
-            <!-- Select label -->
-            <div class="item-title">Fruit</div>
-            <!-- Selected value, not required -->
-            <div class="item-after">Apple</div>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>  
-            
-        </div>
-    </div>
+<!--    
+    -->  
 
-    
     
     
     <!-- Views -->
@@ -85,7 +58,7 @@
                           Right link contains only icon - additional "icon-only" class
                           Additional "open-panel" class tells app to open panel when we click on this link
                         -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                  <!--      <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>-->
                     </div>
                 </div>
             </div>
@@ -96,20 +69,71 @@
                     <!-- Scrollable page content -->
                     <div class="page-content">
                         <div class="content-block">
-                            <h3>Your weight</h3>
-                            <p>kilogrammes</p>
-                            <input class="item-input" type="text" id="weight">
-                            <h3>Your height</h3>
-                            <p>centimeters</p>
-                            <input class="item-input" type="text" id="height">
-                            <h3>Your BMI</h3>
-                            <div id='results'></div>
-                            <div id='info'></div>
-                            <!-- Link to another page -->
-                            <button class="button button-big button-round active" id='btn' onclick='calculate()'>Calculate</button>
-                            <p>
-                            <a href="about.html">About</a>
-                            </p>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"><h3>Your weight</h3>
+                            </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100">kilogrammes
+                            </div>
+                            </div>
+                            
+                             <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100">
+                                    <input class="item-input" id="weight" type="number">
+                            </div>
+                            </div>
+                            
+                            
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"><h3>Your height</h3>
+                            </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100">centimeters
+                            </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"><input class="item-input" type="number" id="height">
+                            </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"><h3>Your BMI</h3>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"> <div id='results'>&nbsp;</div>
+                            </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"> <div id='info'>&nbsp;</div>
+                            </div>
+                            </div>
+                            
+                            <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-50"><button class="button button-big button-round active" id='btn' onclick='calculate()'>Calculate</button>  
+                            </div>
+                            <div class="col-50"><button class="button button-big button-round active" id='btn_reset' onclick='reset()'>Reset</button>  
+                            </div>           
+                            </div>
+                                                
                         </div>
                     </div>
                 </div>
@@ -117,6 +141,10 @@
             <!-- Bottom Toolbar-->
             <div class="toolbar">
                 <div class="toolbar-inner"> 
+                    <a href="about.html">About</a>
+                    <div class="right">
+                    <a href="settings.html">Settings</a>
+                    </div>
                 </div>
             </div>
         </div>

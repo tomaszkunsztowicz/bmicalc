@@ -1,6 +1,6 @@
 <!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
-
-<!-- Top Navbar-->
+<script type="text/javascript" src="js/my-app3.js"></script>
+<!-- Top Navbar BMI suggestion-->
 <div class="navbar">
     <div class="navbar-inner">
         <div class="left">
@@ -16,12 +16,99 @@
     <div data-page="about" class="page">
         <div class="page-content">
             <div class="content-block">
+                
+               <div class="row">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                   <div class="col-100"><h2>Your name</h2>
+                </div>
+               </div> 
+                
+                 <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                        <div class="col-100"><input class="item-input" type="text" id="name">
+                    </div>
+                </div>    
+                   
+               <div class="row">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                   <div class="col-100"><h2>Gender</h2>
+                     <div class="list-block">
+                          <ul>
+                            <!-- Single radio input -->
+                            <li>
+                              <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="gender" value="0" checked="checked">
+                                <div class="item-inner">
+                                  <div class="item-title">Female</div>
+                                </div>
+                              </label>
+                            </li>
+                            <!-- Another radio input -->
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="gender" value="1">
+                                <div class="item-inner">
+                                  <div class="item-title">Male</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>     
+                </div>
+               </div>
+                
+               <div class="row">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                   <div class="col-100"><h2>Units</h2>
+                     <div class="list-block">
+                          <ul>
+                            <!-- Single radio input -->
+                            <li>
+                              <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="units" value="0" checked="checked">
+                                <div class="item-inner">
+                                  <div class="item-title">Metric</div>
+                                </div>
+                              </label>
+                            </li>
+                            <!-- Another radio input -->
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="units" value="1">
+                                <div class="item-inner">
+                                  <div class="item-title">US</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>     
+                </div>
+               </div> 
+                           
+               <div class="row">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                   <div class="col-100"><h1>Age</h1>         
+                </div>
+                </div>
+               <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                                <div class="col-100"><input class="item-input" type="number" id="age">
+                    </div>
+                </div>    
+                   
+                 <div class="row">
+                                <!-- Each "cell" has col-[widht in percents] class -->
+                <div class="col-100"><button class="button button-big button-round active" id='btn_save' onclick='settings()'>Save</button>  
+                        </div>
+                    </div>
                          
-                <p>BMI Calculator</p>
-                <p>Version 1.0</p>
-                <p>Webit Apps</p>
-                     
+                
             </div>
         </div>
     </div>
 </div>
+
+
+

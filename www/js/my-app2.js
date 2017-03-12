@@ -27,20 +27,27 @@ function calculate() {
     gender = localStorage.getItem('gender');
     units = localStorage.getItem('units');*/
     
-    a = document.getElementById('height').value;
+    a = parseInt(document.getElementById('height_m').value);
+    a_cm = parseInt(document.getElementById('height_cm').value);
+      
     b = document.getElementById('weight').value; 
     
     
     if (units == 0) {
     
+    a = (a*100)+a_cm;   
     c = b/Math.pow(a/100, 2);
     c = c.toFixed(2);
 
     } else {
-        
-    c = 703*(b/Math.pow(a/100, 2));
-    c = c.toFixed(2);
-        
+       
+    a = (a*12)+a_cm;  
+    alert(a);
+    alert(a_cm);
+    
+    c = 703*(b/Math.pow(a, 2));
+    c = c.toFixed(2); 
+       
     }
        
     
@@ -71,25 +78,39 @@ function calculate() {
     }
     
     //validations
+    if (units == 0) {
     
+        if (a <= 50 || a >= 240) {
+            myApp.alert("Please give height in range 50-240cm");
+            document.getElementById('height').value = "";
+        }
+        else
+        if (b <= 50 || b >= 150) {
+            myApp.alert("Please give height in range 1-150kg");
+            document.getElementById('weight').value = ""; 
+        }
+   
+    } else {
+        
     if (!a) {
-    myApp.alert("Please give height");
-    }
-   
-    if (!b) {
-    myApp.alert("Please give weight");
+        myApp.alert("Please give height in feet");
+        }
+
+        if (!a_cm) {
+        myApp.alert("Please give height in inches");
+        }
+
+        if (!b) {
+        myApp.alert("Please give weight");
+        }
+
     }
     
-    if (a <= 50 || a >= 240) {
-        myApp.alert("Please give height in range 50-240cm");
-        document.getElementById('height').value = "";
-    }
-    else
-    if (b <= 50 || b >= 150) {
-        myApp.alert("Please give height in range 1-150kg");
-        document.getElementById('weight').value = ""; 
-    }
-   
+    
+    
+    
+    
+    
     document.querySelector('#results').innerHTML = c ;
     document.querySelector('#info').innerHTML = info ;
     
@@ -143,8 +164,6 @@ function settings() {
     name = document.getElementById('name').value;
     
     //metric / inches
-    //dajemy pomiary z wiki
-    //wersja dla dzieci
     //cale dolozyc
     //layout
     //wypuszczamy
@@ -178,16 +197,18 @@ window.onload = function() {
         reset();
         //validation code to see State field is mandatory.  
     } 
+    
+    if (units != 0) {
+        document.querySelector('#height_mt_label').innerHTML = 'feet' ;
+        document.querySelector('#height_cm_label').innerHTML = 'inches' ;      
+    } else {
+        document.querySelector('#height_mt_label').innerHTML = 'meters' ;
+        document.querySelector('#height_cm_label').innerHTML = 'centimeters' ;    
+    }     
 }
 
 
 
-//TO DO S
-//BUTTONY wycentrowac
-//INCHES LAYOUT zmienia sie w zaleznosci od settingow
-//WYPELNIANIE SETTINGOW AUTOMATYCZNIE
-//WYSWIETLANIE IMIENIA W WYNIKU
-//INFO O WLASCIWYM BMI, porownywanie z wynikiem
 
 
 
